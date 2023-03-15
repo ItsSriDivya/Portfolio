@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "antd";
-import AboutMeIcon from '../../assets/images/about-me-pic.jpg';
+import AboutMeIcon from '../../assets/images/about-me-pic1.jpg';
 import Resume from '../../assets/files/Resume.pdf'
 import { DownloadOutlined } from "@ant-design/icons"; 
 
@@ -12,8 +12,8 @@ function AboutMe() {
                     <img class='fitting-image' style={{ width: '300px', height: '300px' }} src={AboutMeIcon} alt='about-me' />
                 </div>
                 <div class="aboutme-para">
-                    <h4 className="about-me-title">Hello There!</h4>
-                    <h6 className="about-me-title">Welcome to my Portfolio :) </h6>
+                    <h4 className="about-me-title" style={{ fontFamily: 'Lucida Sans', color: '#6b3847' }}>Hello There! 😃</h4>
+                    <h6 className="about-me-title" style={{ fontFamily: 'Comic Sans MS', color: '#5e90e0' }}>Welcome to my Portfolio 📋 </h6>
                     <p className="about-para-1">
                         4+ years of experience in Front End Development with hands-on in identifying web-based user interactions along with designing & implementing highly-responsive user interface components by deploying React concepts.
                         Proficient in translating designs & wireframes into high-quality code, and writing application interface code via Javascript and ReactJS workflows.
