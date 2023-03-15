@@ -1,0 +1,239 @@
+.content-container {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+
+  // margin: 20px;
+  .content-sub {
+    display: flex;
+
+    .image-div {
+      width: 30%;
+      border-radius: 20px;
+      .fitting-image {
+        object-fit: cover;
+        border-radius: 50%;
+        animation: 4s linear 0s infinite alternate sun-rise;
+      }
+      // border-right: 2px solid black
+    }
+
+    .introduction {
+      width: 70%;
+      padding: 50px;
+      margin: auto;
+      white-space: nowrap;
+
+      .title {
+        text-align: initial;
+        font-weight: 700;
+        color: #206caa;
+        font-size: 20px;
+        font-family: cursive;
+      }
+
+      h2 {
+        overflow: hidden;
+        text-align: initial;
+      }
+
+      .extra-desc {
+        overflow: hidden;
+        // white-space: normal;
+        color: #3a3838;
+        font-family: 'Century Gothic';
+        text-align: initial;
+        animation: typing 4s steps(15, end) forwards;
+      }
+
+      .forward-icon-btn {
+        position: absolute;
+        right: 30px;
+        background: #87a159;
+        border-color: #87a159;
+        top: 30%;
+
+        .forward-icon {
+          cursor: pointer;
+          color: #6c6a6a;
+          font-size: 50px;
+          animation-duration: 3s;
+          animation-name: slidein;
+        }
+      }
+    }
+  }
+
+  @keyframes typing {
+    0% {
+      width: 0%
+    }
+
+    100% {
+      width: 100%
+    }
+  }
+
+  @keyframes blink {
+
+    0%,
+    100% {
+      border-right: 2px solid transparent;
+    }
+
+    50% {
+      border-right: 2px solid #222;
+    }
+  }
+
+  @keyframes flip {
+
+    0%,
+    80% {
+      transform: rotateY(360deg)
+    }
+  }
+
+  @keyframes sun-rise {
+    from {
+      /* pushes the sun down past the viewport */
+      transform: translateY(6vh);
+    }
+
+    to {
+      /* returns the sun to its default position */
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 200%;
+    }
+
+    to {
+      margin-left: 0%;
+      width: 10%;
+    }
+  }
+}
+
+.area {
+  background: #87a159;
+  width: 100%;
+  height: 100vh;
+}
+
+.circles {
+  // position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -50px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}

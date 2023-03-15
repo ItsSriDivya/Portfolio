@@ -1,0 +1,254 @@
+.portfolio-div {
+    section:not(#projects) {
+        display: grid;
+        place-items: center;
+        height: 85vh;
+        font-size: 32px;
+        font-weight: bold;
+    }
+    section:not(#contact) {
+        background-image: url('../../assets/images/about-me-bg.png');
+    }
+
+    .navbar-div {
+        height: 50px;
+        top: 0;
+        z-index: 100;
+        position: fixed;
+        width: 100%;
+        background-color: #e6e6e6;
+        box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
+        .profile-pic {
+            display: flex;
+            text-align: initial;
+            margin: 10px 0px 0px 30px;
+            cursor: pointer;
+            .fitting-image {
+                margin-right: 10px;
+                object-fit: cover;
+                border-radius: 50%; 
+            }
+        }
+        .navbar-header {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+        li {
+            padding: 10px;
+            display: inline;
+            cursor: pointer;
+            a {
+                text-decoration: none;
+                color: #000000;
+            }
+            a:hover {
+                color: #4981e9
+            }
+        }
+    }
+
+    .aboutme-container {
+        padding: 30px;
+        .about-div {
+            margin-top: 50px;
+            display: flex;
+            .aboutme-img {
+                width: 30%;
+                margin-top: 60px;
+                position: relative;
+                animation: run 3s ease-in;
+                animation-direction: reverse;
+                .fitting-image {
+                    object-fit: cover;
+                    border-radius: 50%; 
+                }
+                // border-radius: 50%;
+            }
+            .aboutme-para {
+                width: 70%;
+                padding: 35px;
+                position: relative;
+                animation: runout 3s ease-out;
+                animation-direction: normal;
+                .hire-me-btn {
+                    text-decoration: none;
+                }
+
+                .about-me-title {
+                    text-transform: uppercase;
+                    color: #990099;
+                    animation: flip 2s;
+                    line-height: 40px;
+                    font-family: Verdana;
+                    // animation-delay: calc(.2s * var(--i)) 
+                }
+
+                .about-para-1 {
+                    text-align: justify;
+                    font-size: 14px;
+                    color: #ff8080
+                }
+
+                .about-para-2 {
+                    font-size: 14px;
+                    color: #ffa366;
+                    margin-bottom: 8px;
+                }
+
+                .hire-button {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .skills-div {
+        width: 85%;
+        margin: auto;
+
+        .proficient-row {
+            padding: 15px;
+            display: flex;
+            border: 1px solid #e6e6e6;
+            width: inherit;
+            margin: auto;
+            box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.11);
+        }
+
+        .proficient-title {
+            position: relative;
+            top: -25px;
+            left: 10px;
+            font-family: bradley hand, cursive;
+        }
+
+        .skills-cards {
+            margin: 10px;
+            // padding: 20px;
+            .ant-card-body {
+                padding: 0px !important
+            }
+        }
+
+        .skillful-row {
+            display: flex;
+            padding: 15px;
+            border: 1px solid #e6e6e6;
+            width: inherit;
+            margin: auto;
+            margin-top: 50px;
+            box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.11);
+        }
+    }
+
+    section#projects {
+        display: block !important;
+        height: 100vh;
+        // border: 2px solid black;
+    }
+    .projects-div {
+        width: 100%;
+        .content-style {
+            width: 80% !important;
+            margin: auto;
+            height: 450px;
+            color: #fff;
+            background-color: #364d79;
+
+            .company-header {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .designation-class {
+                font-style: italic;
+                font-family: cursive;
+                color: #43B049
+            }
+
+            .list-styles {
+                list-style-type: square;
+
+                li {
+                    margin-bottom: 20px;
+                }
+
+                .project-headers {
+                    color: #faebd7;
+                    font-family: Monospace;
+                }
+            }
+        }
+    }
+    section#contact {
+        background-color: #000000;
+        color: #fff;
+        height: 40vh
+    }
+    .footer-contact-div {
+        width: 100%;
+        .contact-div {
+            display: flex;
+            justify-content: space-around;
+            .profile-details {
+                color: #ffffff;
+                .name-details {
+                    margin-top: 20px;
+                    display: flex;
+                    text-align: initial;
+                    .profile-pic {
+                        // text-align: initial;
+                        .fitting-image {
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+            .contact-details {
+                margin-top: 50px;
+                color: #ffffff;
+                a {
+                    color: #fff;
+                    // color: #4981e9
+                }
+                .linkedin-icon {
+                    cursor: pointer;
+                }
+                .linkedin-icon:hover {
+                    color: #4981e9;
+                    border: 2px solid #4981e9;
+                    border-radius: 30px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    @keyframes flip {
+        50% {
+            transform: rotateX(20deg)
+        }
+    }
+
+    @keyframes run {
+        0% {
+            right: 0;
+        }
+
+        100% {
+            right: 70%;
+        }
+    }
+
+    @keyframes runout {
+        0% {
+            right: 100%;
+        }
+
+        100% {
+            right: 0;
+        }
+    }
+}
