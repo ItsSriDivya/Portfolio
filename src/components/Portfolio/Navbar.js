@@ -10,7 +10,7 @@ function Navbar() {
         <div className="navbar-div">
         <header>
             <nav>
-            <div class="profile-pic" onClick={() => navigate("/")}>
+            <div class="profile-pic" onClick={() => navigate("/portfolio")}>
                 <img class="fitting-image" style={{ width: '30px', height: '30px' }} src={ProfilePic} alt='profile-pic' />
                 <div style={{ fontFamily: 'Comic Sans MS', marginTop: '5px'}}>SriDivya Pulapa</div>
             </div>
