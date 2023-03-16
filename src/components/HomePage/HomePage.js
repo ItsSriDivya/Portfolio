@@ -17,7 +17,7 @@ function HomePage() {
     }
 
     const navigateToPortfolio = () => {
-        navigate("/portfolio");
+        navigate("/portfolio-page");
     }
     return (
         <>
