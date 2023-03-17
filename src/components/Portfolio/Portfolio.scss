@@ -1,15 +1,13 @@
 .portfolio-div {
+    background-image: url('../../assets/images/about-me-bg-temp.jpg');
+    background-repeat: round;
+    background-size: 100%;
     section:not(#projects) {
         display: grid;
         place-items: center;
         height: 85vh;
         font-size: 32px;
         font-weight: bold;
-    }
-    section:not(#contact) {
-        background-image: url('../../assets/images/about-me-bg-temp.jpg');
-        background-repeat: no-repeat;
-        background-size: 100%;
     }
 
     .navbar-div {
@@ -79,7 +77,7 @@
 
                 .about-me-title {
                     text-transform: uppercase;
-                    animation: flip 2s;
+                    // animation: flip 2s;
                     line-height: 40px;
                     font-family: Verdana;
                 }

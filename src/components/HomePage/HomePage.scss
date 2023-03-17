@@ -27,7 +27,7 @@
       .title {
         text-align: initial;
         font-weight: 700;
-        color: #206caa;
+        color: #e8e5e5;
         font-size: 20px;
         font-family: cursive;
       }
@@ -40,7 +40,7 @@
       .extra-desc {
         overflow: hidden;
         // white-space: normal;
-        color: #3a3838;
+        color: #414141;
         font-family: 'Century Gothic';
         text-align: initial;
         animation: typing 4s steps(15, end) forwards;
@@ -49,13 +49,13 @@
       .forward-icon-btn {
         position: absolute;
         right: 30px;
-        background: #87a159;
-        border-color: #87a159;
+        background: #67a8e0;
+        border-color: #67a8e0;
         top: 30%;
 
         .forward-icon {
           cursor: pointer;
-          color: #6c6a6a;
+          color: #d4d1d1;
           font-size: 50px;
           animation-duration: 3s;
           animation-name: slidein;
@@ -120,7 +120,7 @@
 }
 
 .area {
-  background: #87a159;
+  background: #67a8e0;
   width: 100%;
   height: 100vh;
 }
