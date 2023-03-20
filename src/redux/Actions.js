@@ -24,7 +24,6 @@ export const getHomePageData = () => {
     axios.get(`https://portfolio-api-vercel-fxhb9jm2q-itssridivya.vercel.app/GetIntroData/`)
       .then((response) => {
         const extractedData = response.data;
-        console.log('check da', extractedData)
         dispatch(saveHomePageDataSuccess(extractedData));
       })
       .catch((error) => {

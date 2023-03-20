@@ -13,7 +13,6 @@ function HomePage() {
     const dispatch = useDispatch();
     const [homepageData, setHomePageData] = useState({})
     const data = useSelector(state => state.infoData);
-    console.log('check homepage', homepageData)
     useEffect(() => {
         dispatch(getHomePageData())
     }, [dispatch])
