@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import JSIcon from '../../assets/images/js.png';
 import ReactIcon from '../../assets/images/react.png';
 import HtmlIcon from '../../assets/images/html.jpg';
@@ -10,64 +11,79 @@ import BootIcon from '../../assets/images/bootstrap.png';
 import TSIcon from '../../assets/images/typescript.png';
 import DocIcon from '../../assets/images/docker.png';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { getSkillSetData } from '../../redux/Actions'
 import { Card } from 'antd';
 import './Portfolio.scss'
 
 function Skills() {
-    const ProficientSkillSet = [
+    const dispatch = useDispatch();
+    const skillSetData = useSelector(state => state.skillSetData);
+    const [proficientSkills, setProficientSkills] = useState([]);
+    const [skillfulSkills, setSkillfulSkills] = useState([]);
+    const skillsIcons = [
         {
             key: 'js',
-            title: 'Javascript',
             image: JSIcon
         },
         {
             key: 'react',
-            title: 'React JS',
             image: ReactIcon
         },
         {
             key: 'redux',
-            title: 'Redux',
             image: ReduxIcon
         },
         {
             key: 'html',
-            title: 'HTML',
             image: HtmlIcon
         },
         {
             key: 'css',
-            title: 'CSS',
             image: CSSIcon
         },
         {
             key: 'sass',
-            title: 'Sass',
             image: SassIcon
         },
-    ]
-    const skillfulSkillSet = [
         {
             key: 'ts',
-            title: 'Typescript',
             image: TSIcon
         },
         {
             key: 'bs',
-            title: 'Bootstrap',
             image: BootIcon
         },
         {
             key: 'python',
-            title: 'Python',
             image: PythonIcon
         },
         {
             key: 'docker',
-            title: 'Docker',
             image: DocIcon
         },
     ]
+    useEffect(() => {
+        dispatch(getSkillSetData())
+    }, [dispatch])
+    
+    useEffect(() => {
+        if (!skillSetData.loading && Object.keys(skillSetData.skillsData).length > 0) {
+            const proficient = [...skillSetData.skillsData.ProficientSkillSet];
+            const skillful = [...skillSetData.skillsData.skillfulSkillSet];
+            const proficientSkillsWithIcons = proficient.length > 0 && proficient.map(item => {
+                const iconMapWithTitle = skillsIcons.filter(i => i.key === item.key);
+                item.image = iconMapWithTitle[0].image
+                return item;
+            });
+            const skillfulSkillsWithIcons = skillful.length > 0 && skillful.map(item => {
+                const iconMapWithTitle = skillsIcons.filter(i => i.key === item.key);
+                item.image = iconMapWithTitle[0].image
+                return item;
+            })
+            setProficientSkills(proficientSkillsWithIcons);
+            setSkillfulSkills(skillfulSkillsWithIcons);
+        }
+    }, [skillSetData])
     const displaySkillCards = (skillSet) => {
         const result = skillSet.map(item => {
             return (
@@ -92,11 +108,11 @@ function Skills() {
             <h3 style={{ fontFamily: 'Candara' }}>Technologies</h3>
             <div className='proficient-row'>
                 <h6 className='proficient-title'>Proficient</h6>
-                {displaySkillCards(ProficientSkillSet)}
+                {proficientSkills.length > 0 && displaySkillCards(proficientSkills)}
             </div>
             <div className='skillful-row'>
                 <h6 className='proficient-title'>Skillful</h6>
-                {displaySkillCards(skillfulSkillSet)}
+                {skillfulSkills.length > 0 && displaySkillCards(skillfulSkills)}
             </div>
         </div>
     )

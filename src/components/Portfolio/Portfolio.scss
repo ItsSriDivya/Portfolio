@@ -211,16 +211,13 @@
                 color: #ffffff;
                 a {
                     color: #fff;
-                    // color: #4981e9
                 }
                 .linkedin-icon {
                     cursor: pointer;
                 }
                 .linkedin-icon:hover {
-                    color: #4981e9;
-                    border: 2px solid #4981e9;
-                    border-radius: 30px;
-                    padding: 10px;
+                    color: #000000;
+                    background-color: #fff;
                 }
             }
         }

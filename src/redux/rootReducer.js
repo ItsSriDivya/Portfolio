@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
 import {
-    infoData
+    infoData,
+    skillSetData
 } from "./Reducer";
 
 export default combineReducers({
-    infoData
+    infoData,
+    skillSetData
 });
