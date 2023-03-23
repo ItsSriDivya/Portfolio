@@ -1,7 +1,7 @@
 .portfolio-div {
-    background-image: url('../../assets/images/about-me-bg-temp.jpg');
-    background-repeat: round;
-    background-size: 100%;
+    background: linear-gradient(-45deg, #a8e2f3, #fff, #a8e2f3, #fff);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     section:not(#projects) {
         display: grid;
         place-items: center;
@@ -57,27 +57,21 @@
                 width: 30%;
                 margin-top: 60px;
                 position: relative;
-                animation: run 3s ease-in;
-                animation-direction: reverse;
                 .fitting-image {
                     object-fit: cover;
                     border-radius: 50%; 
                 }
-                // border-radius: 50%;
             }
             .aboutme-para {
                 width: 70%;
                 padding: 35px;
                 position: relative;
-                animation: runout 3s ease-out;
-                animation-direction: normal;
                 .hire-me-btn {
                     text-decoration: none;
                 }
 
                 .about-me-title {
                     text-transform: uppercase;
-                    // animation: flip 2s;
                     line-height: 40px;
                     font-family: Verdana;
                 }
@@ -124,7 +118,6 @@
 
         .skills-cards {
             margin: 10px;
-            // padding: 20px;
             .ant-card-body {
                 padding: 0px !important
             }
@@ -145,7 +138,6 @@
     section#projects {
         display: block !important;
         height: 120vh;
-        // border: 2px solid black;
     }
     .projects-div {
         width: 100%;
@@ -198,7 +190,6 @@
                     display: flex;
                     text-align: initial;
                     .profile-pic {
-                        // text-align: initial;
                         .fitting-image {
                             object-fit: cover;
                             border-radius: 50%;
@@ -246,6 +237,17 @@
 
         100% {
             right: 0;
+        }
+    }
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
         }
     }
 }

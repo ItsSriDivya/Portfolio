@@ -3,7 +3,6 @@
   top: 25%;
   width: 100%;
 
-  // margin: 20px;
   .content-sub {
     display: flex;
 
@@ -15,7 +14,6 @@
         border-radius: 50%;
         animation: 4s linear 0s infinite alternate sun-rise;
       }
-      // border-right: 2px solid black
     }
 
     .introduction {
@@ -39,7 +37,6 @@
 
       .extra-desc {
         overflow: hidden;
-        // white-space: normal;
         color: #414141;
         font-family: 'Century Gothic';
         text-align: initial;
@@ -126,7 +123,6 @@
 }
 
 .circles {
-  // position: absolute;
   top: 0;
   left: 0;
   width: 100%;
