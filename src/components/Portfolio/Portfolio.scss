@@ -57,6 +57,8 @@
                 width: 30%;
                 margin-top: 60px;
                 position: relative;
+                animation: run 1s ease-in;
+                animation-direction: reverse;
                 .fitting-image {
                     object-fit: cover;
                     border-radius: 50%; 
@@ -66,6 +68,8 @@
                 width: 70%;
                 padding: 35px;
                 position: relative;
+                animation: runout 1s ease-in;
+                animation-direction: normal;
                 .hire-me-btn {
                     text-decoration: none;
                 }
@@ -232,11 +236,11 @@
 
     @keyframes runout {
         0% {
-            right: 100%;
+            left: 30%;
         }
 
         100% {
-            right: 0;
+            left: 0;
         }
     }
     @keyframes gradient {
