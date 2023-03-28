@@ -1,4 +1,4 @@
-# Portfolio
+# Portfolio: https://itssridivya.github.io/portfolio/
 
 A UI application inspired from the idea of presenting my details (portfolio) in a fun way built using my proficient skills. 
 	Application includes concepts like react routing, react hooks, redux, css animations.
